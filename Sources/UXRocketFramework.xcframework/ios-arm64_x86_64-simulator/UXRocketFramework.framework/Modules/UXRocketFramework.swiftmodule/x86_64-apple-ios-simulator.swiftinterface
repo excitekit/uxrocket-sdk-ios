@@ -1,0 +1,182 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UXRocketFramework
+import CommonCrypto
+import CoreTelephony
+import CryptoKit
+import Foundation
+import Network
+import Swift
+import UIKit
+@_exported import UXRocketFramework
+import _Concurrency
+public enum EventContext {
+  case install
+  case openPage
+  case mainMenu
+  case button
+  case popup
+  case links
+  case input
+  case other(type: Swift.String)
+}
+public struct AttributeParameter : Swift.Codable {
+  public init(id: Swift.Int, value: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Element : Swift.Codable {
+  public init(id: Swift.Int, campaignID: Swift.Int, variantID: Swift.Int)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Variants : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct NetworkingConfiguration {
+  public init(baseURL: Swift.String)
+}
+public protocol UXRocketServiceMethods {
+  func logEvent(event: UXRocketFramework.EventContext, itemName: Swift.String?, itemIdentificator: Swift.String?, parameters: [UXRocketFramework.AttributeParameter])
+  func getVariants(forItem itemIdentificator: Swift.String, parameters: [UXRocketFramework.AttributeParameter], completion: @escaping UXRocketFramework.TypeClosure<UXRocketFramework.GetVariantsResponse?>)
+  func logCampaignEvent(isOpenPageEvent: Swift.Bool, viewControllerID: Swift.String, itemIdentificator: Swift.String?, totalValue: Swift.Int?, parameters: [UXRocketFramework.AttributeParameter])
+}
+public enum SuccessResult<E> where E : Swift.Error {
+  case success
+  case error(E)
+}
+public typealias TypeClosure<T> = (T) -> Swift.Void
+public typealias Completion<T> = (Swift.Result<T, UXRocketFramework.APIError>) -> Swift.Void
+public typealias SuccessCompletion = (UXRocketFramework.SuccessResult<UXRocketFramework.APIError>) -> Swift.Void
+extension Foundation.URLRequest {
+  public var curlString: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class UXRocket {
+  @objc deinit
+}
+extension UXRocketFramework.UXRocket {
+  public static func configure(withAuthKey authKey: Swift.String, rocketAppID: Swift.String, serverEnvironment: UXRocketFramework.UXRocketServer)
+  public static func isDebugLoggerEnable(_ isEnable: Swift.Bool)
+  public static func setCountryAndCity(_ country: Swift.String?, _ city: Swift.String?)
+  public static func setDefaultParameters(_ parameters: [UXRocketFramework.AttributeParameter]?)
+  public static func setParameter(_ parameter: UXRocketFramework.AttributeParameter)
+  public static func logEvent(event: UXRocketFramework.EventContext, itemName: Swift.String? = nil, itemIdentificator: Swift.String? = nil, parameters: [UXRocketFramework.AttributeParameter] = [])
+  public static func getUIConfiguration(forItem itemIdentificator: Swift.String, parameters: [UXRocketFramework.AttributeParameter] = [], completion: @escaping UXRocketFramework.TypeClosure<UXRocketFramework.GetVariantsResponse?>)
+  public static func logCampaignEvent(isOpenPageEvent: Swift.Bool = false, viewControllerID: Swift.String, itemIdentificator: Swift.String? = nil, totalValue: Swift.Int? = nil, parameters: [UXRocketFramework.AttributeParameter] = [])
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case put
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct EmptyResponse : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension UXRocketFramework.UXRocket {
+  public static func customizeItems(_ items: [UIKit.UIView], with campaigns: UXRocketFramework.GetVariantsResponse)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func configure(with variantAttributes: UXRocketFramework.VariantAttributes)
+}
+public struct UXRocketConfig {
+  public init(authKey: Swift.String, rocketAppID: Swift.String, serverEnvironment: UXRocketFramework.UXRocketServer)
+}
+public enum UXRocketServer {
+  case production
+  case develop
+  case custom(Swift.String)
+}
+public enum RequestContentType {
+  case json
+  public static func == (a: UXRocketFramework.RequestContentType, b: UXRocketFramework.RequestContentType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct APIErrorModel : Swift.Error, Swift.Equatable {
+  public let code: Swift.String
+  public var title: Swift.String?
+  public let text: Swift.String
+  public var httpCode: Swift.Int?
+  public init(code: Swift.String, title: Swift.String?, text: Swift.String, httpCode: Swift.Int? = nil)
+  public init(anotherError: UXRocketFramework.APIErrorModel)
+  public static func == (a: UXRocketFramework.APIErrorModel, b: UXRocketFramework.APIErrorModel) -> Swift.Bool
+}
+extension UXRocketFramework.APIErrorModel : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension UXRocketFramework.APIErrorModel {
+  public func withHttpCode(_ httpCode: Swift.Int) -> UXRocketFramework.APIErrorModel
+}
+public typealias GetVariantsResponse = [UXRocketFramework.Campaign]
+public struct Campaign : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Variant : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VariantAttributes : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Attribute : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Action : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum APIError : Swift.Error, Swift.Equatable {
+  case parsed(UXRocketFramework.APIErrorModel)
+  case unknown(httpCode: Swift.Int? = nil)
+  case decodingError(httpCode: Swift.Int? = nil)
+  case serverIsNonResponsive(httpCode: Swift.Int? = nil)
+  case timedOut(httpCode: Swift.Int? = nil)
+  case noInternet
+  public static func == (a: UXRocketFramework.APIError, b: UXRocketFramework.APIError) -> Swift.Bool
+}
+extension UXRocketFramework.APIError {
+  public var code: Swift.String {
+    get
+  }
+  public var httpCode: Swift.Int? {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+extension UXRocketFramework.APIError {
+  public func withHttpCode(_ httpCode: Swift.Int) -> UXRocketFramework.APIError
+}
+extension UXRocketFramework.APIError : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension UXRocketFramework.APIError {
+  public enum LocalCodes {
+    public static let unknown: Swift.String
+    public static let serverIsNonResponsive: Swift.String
+    public static let timedOut: Swift.String
+    public static let decodingError: Swift.String
+    public static let noInternet: Swift.String
+  }
+}
+extension UXRocketFramework.HTTPMethod : Swift.Equatable {}
+extension UXRocketFramework.HTTPMethod : Swift.Hashable {}
+extension UXRocketFramework.HTTPMethod : Swift.RawRepresentable {}
+extension UXRocketFramework.RequestContentType : Swift.Equatable {}
+extension UXRocketFramework.RequestContentType : Swift.Hashable {}

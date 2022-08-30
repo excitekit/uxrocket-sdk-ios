@@ -1,0 +1,11 @@
+framework module UXRocketFramework {
+  umbrella header "UXRocketFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module UXRocketFramework.Swift {
+    header "UXRocketFramework-Swift.h"
+    requires objc
+}
