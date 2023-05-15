@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UXRocketFramework
 import CommonCrypto
 import CoreTelephony
@@ -38,7 +38,8 @@ public struct NetworkingConfiguration {
   public init(baseURL: Swift.String)
 }
 public protocol UXRocketServiceMethods {
-  func logEvent(event: UXRocketFramework.EventContext, itemName: Swift.String?, itemIdentificator: Swift.String?, parameters: [UXRocketFramework.AttributeParameter])
+  func logEvent(event: UXRocketFramework.EventContext, itemName: Swift.String?, itemIdentificator: Swift.String?, parameters: [UXRocketFramework.AttributeParameter], productCode: Swift.String?, productPrice: Swift.Double?, productCount: Swift.Int?, cartSum: Swift.Double?)
+  func saveIdentityMatch(matchType: Swift.Int, identityType1: Swift.Int, identityValue1: Swift.String, identityType2: Swift.Int?, identityValue2: Swift.String?, identityType3: Swift.Int?, identityValue3: Swift.String?)
   func getVariants(forItem itemIdentificator: Swift.String, parameters: [UXRocketFramework.AttributeParameter], completion: @escaping UXRocketFramework.TypeClosure<UXRocketFramework.GetVariantsResponse?>)
   func logCampaignEvent(isOpenPageEvent: Swift.Bool, viewControllerID: Swift.String, itemIdentificator: Swift.String?, totalValue: Swift.Int?, parameters: [UXRocketFramework.AttributeParameter])
 }
@@ -63,7 +64,8 @@ extension UXRocketFramework.UXRocket {
   public static func setCountryAndCity(_ country: Swift.String?, _ city: Swift.String?)
   public static func setDefaultParameters(_ parameters: [UXRocketFramework.AttributeParameter]?)
   public static func setParameter(_ parameter: UXRocketFramework.AttributeParameter)
-  public static func logEvent(event: UXRocketFramework.EventContext, itemName: Swift.String? = nil, itemIdentificator: Swift.String? = nil, parameters: [UXRocketFramework.AttributeParameter] = [])
+  public static func logEvent(event: UXRocketFramework.EventContext, itemName: Swift.String? = nil, itemIdentificator: Swift.String? = nil, parameters: [UXRocketFramework.AttributeParameter] = [], productCode: Swift.String? = nil, productPrice: Swift.Double? = nil, productCount: Swift.Int? = nil, cartSum: Swift.Double? = nil)
+  public static func saveIdentityMatch(matchType: Swift.Int, identityType1: Swift.Int, identityValue1: Swift.String, identityType2: Swift.Int? = nil, identityValue2: Swift.String? = nil, identityType3: Swift.Int? = nil, identityValue3: Swift.String? = nil)
   public static func getUIConfiguration(forItem itemIdentificator: Swift.String, parameters: [UXRocketFramework.AttributeParameter] = [], completion: @escaping UXRocketFramework.TypeClosure<UXRocketFramework.GetVariantsResponse?>)
   public static func logCampaignEvent(isOpenPageEvent: Swift.Bool = false, viewControllerID: Swift.String, itemIdentificator: Swift.String? = nil, totalValue: Swift.Int? = nil, parameters: [UXRocketFramework.AttributeParameter] = [])
 }
