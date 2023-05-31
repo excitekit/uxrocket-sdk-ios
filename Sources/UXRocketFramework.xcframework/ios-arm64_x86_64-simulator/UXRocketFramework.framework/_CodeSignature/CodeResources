@@ -18,51 +18,51 @@
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xdc53NXVblfr7Ir8W6j/CrfHYSw=
+		3pOXeHv7OzXdGG/WRTKj+GW+euw=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		P2pe+C35PZ9uH+26Je2N88qjb8Q=
+		b/peaQUU6dAcGY7lFpNBEd+YWWA=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		v271jWLmyvL6SXFg/SlBILx8Qi4=
+		huOez+V72t+XV+J484+ZA8IwE38=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		xdc53NXVblfr7Ir8W6j/CrfHYSw=
+		3pOXeHv7OzXdGG/WRTKj+GW+euw=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		P2pe+C35PZ9uH+26Je2N88qjb8Q=
+		b/peaQUU6dAcGY7lFpNBEd+YWWA=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		v271jWLmyvL6SXFg/SlBILx8Qi4=
+		huOez+V72t+XV+J484+ZA8IwE38=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SGnxFmXQKxIe1ogrOxsG/JlmXBk=
+		BBn+nJxem8+sSv/evbcMQSlwIf4=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WdQEhGNd6ML6uV33alTQux7J8vo=
+		F8DyVDW8UEH3mkKjySJlzTFebhA=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TsRNZPZom3yRcc128AWub/Ne+yE=
+		ZhTPJxnYY+sr6Zzc7rUkIdAvvvQ=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		SGnxFmXQKxIe1ogrOxsG/JlmXBk=
+		BBn+nJxem8+sSv/evbcMQSlwIf4=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		WdQEhGNd6ML6uV33alTQux7J8vo=
+		F8DyVDW8UEH3mkKjySJlzTFebhA=
 		</data>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		TsRNZPZom3yRcc128AWub/Ne+yE=
+		ZhTPJxnYY+sr6Zzc7rUkIdAvvvQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rPafCOidiz4T/8VmATA6lEkI2eXbu+OhH6C82OO7aL0=
+			7HuVygTJHPnT0SEvBthLOOodLhqR/FTt58vr5ll23Eg=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xjLYLIh3CEEnS2NhL8RdNDLqt1plSVPZ3c6rKkEqqeM=
+			6mIFdLUY6npIoP5bEhbLZqlkZSgIc4eOLgwbKr4uqt4=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zg5tXxgTjmTWT7hpvBDJ3QZot8L6aJAksfyZi8caATk=
+			vF+2J+HJ6RVLnm1w7QhLHY28lAEyjQ/pXbokyPXZXHQ=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rPafCOidiz4T/8VmATA6lEkI2eXbu+OhH6C82OO7aL0=
+			7HuVygTJHPnT0SEvBthLOOodLhqR/FTt58vr5ll23Eg=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xjLYLIh3CEEnS2NhL8RdNDLqt1plSVPZ3c6rKkEqqeM=
+			6mIFdLUY6npIoP5bEhbLZqlkZSgIc4eOLgwbKr4uqt4=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zg5tXxgTjmTWT7hpvBDJ3QZot8L6aJAksfyZi8caATk=
+			vF+2J+HJ6RVLnm1w7QhLHY28lAEyjQ/pXbokyPXZXHQ=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f6VXXUe438UDQeLEkflBCCYdCEuKXr5AUQr9azajtow=
+			J7HLQXlH9N59Nz1PvK8KOVcSubcFzMgZ1Om5/2uB628=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JzhTchrA++Kj7bw4+0dBYl1GayQLAQ7vHgayeNkdGnc=
+			DFzkaDWhYUn+IpSWSwkOeacwvGAcBt3Ap5xKp1suWzk=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IfiC9voLYIgs2urliRZ8H/fSAYWaBqqMSlqmQgpcTqU=
+			AHLO35beMAWzSI+Kdz+IgVRxgCqHjsTrfvL/ojkCn3Q=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f6VXXUe438UDQeLEkflBCCYdCEuKXr5AUQr9azajtow=
+			J7HLQXlH9N59Nz1PvK8KOVcSubcFzMgZ1Om5/2uB628=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JzhTchrA++Kj7bw4+0dBYl1GayQLAQ7vHgayeNkdGnc=
+			DFzkaDWhYUn+IpSWSwkOeacwvGAcBt3Ap5xKp1suWzk=
 			</data>
 		</dict>
 		<key>Modules/UXRocketFramework.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IfiC9voLYIgs2urliRZ8H/fSAYWaBqqMSlqmQgpcTqU=
+			AHLO35beMAWzSI+Kdz+IgVRxgCqHjsTrfvL/ojkCn3Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
