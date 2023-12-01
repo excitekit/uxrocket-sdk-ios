@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UXRocketFramework
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CommonCrypto
 import CoreTelephony
 import CryptoKit
@@ -10,19 +11,21 @@ import Swift
 import UIKit
 @_exported import UXRocketFramework
 import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
 public struct AttributeParameter : Swift.Codable {
   public init(id: Swift.Int, value: Swift.String)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Element : Swift.Codable {
   public init(id: Swift.Int, campaignID: Swift.Int, variantID: Swift.Int)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Variants : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct NetworkingConfiguration {
   public init(baseURL: Swift.String)
@@ -82,13 +85,13 @@ public enum HTTPMethod : Swift.String {
   }
 }
 public struct EmptyResponse : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UXRocketFramework.UXRocket {
   public static func customizeItems(_ items: [UIKit.UIView], with campaigns: UXRocketFramework.GetVariantsResponse)
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func configure(with variantAttributes: UXRocketFramework.VariantAttributes)
+  @_Concurrency.MainActor(unsafe) public func uxrConfigure(with variantAttributes: UXRocketFramework.VariantAttributes)
 }
 public struct UXRocketConfig {
   public init(authKey: Swift.String, rocketAppID: Swift.String, serverEnvironment: UXRocketFramework.UXRocketServer)
@@ -116,31 +119,31 @@ public struct APIErrorModel : Swift.Error, Swift.Equatable {
   public static func == (a: UXRocketFramework.APIErrorModel, b: UXRocketFramework.APIErrorModel) -> Swift.Bool
 }
 extension UXRocketFramework.APIErrorModel : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UXRocketFramework.APIErrorModel {
   public func withHttpCode(_ httpCode: Swift.Int) -> UXRocketFramework.APIErrorModel
 }
 public typealias GetVariantsResponse = [UXRocketFramework.Campaign]
 public struct Campaign : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Variant : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct VariantAttributes : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Attribute : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Action : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum APIError : Swift.Error, Swift.Equatable {
   case parsed(UXRocketFramework.APIErrorModel)
@@ -166,7 +169,7 @@ extension UXRocketFramework.APIError {
   public func withHttpCode(_ httpCode: Swift.Int) -> UXRocketFramework.APIError
 }
 extension UXRocketFramework.APIError : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UXRocketFramework.APIError {
   public enum LocalCodes {
